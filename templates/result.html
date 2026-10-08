@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h1>Your Study Efficiency</h1>
+
+        <div class="score">
+            {{ prediction }}%
+        </div>
+
+        <h2>{{ category }}</h2>
+
+        <div class="details">
+
+            <p>
+                📚 Study Hours:
+                <strong>{{ study_hours }}</strong>
+            </p>
+
+            <p>
+                😴 Sleep Hours:
+                <strong>{{ sleep_hours }}</strong>
+            </p>
+
+            <p>
+                📱 Phone Usage:
+                <strong>{{ phone_hours }}</strong>
+            </p>
+
+            <p>
+                🎯 Focus Level:
+                <strong>{{ focus_level }}/10</strong>
+            </p>
+
+            <p>
+                😰 Stress Level:
+                <strong>{{ stress_level }}/10</strong>
+            </p>
+
+        </div>
+
+        <a href="/">
+            <button>Try Again</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

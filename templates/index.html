@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyWise</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>StudyWise</h1>
+        <p>Study Efficiency Predictor</p>
+    </div>
+
+    <div class="card">
+
+        <h2>Enter Your Study Habits</h2>
+
+        <form action="/predict" method="POST">
+
+            <label>Study Hours per Day</label>
+            <input
+                type="number"
+                name="study_hours"
+                min="0"
+                max="24"
+                step="0.1"
+                required
+            >
+
+            <label>Sleep Hours per Day</label>
+            <input
+                type="number"
+                name="sleep_hours"
+                min="0"
+                max="24"
+                step="0.1"
+                required
+            >
+
+            <label>Phone Usage Hours</label>
+            <input
+                type="number"
+                name="phone_hours"
+                min="0"
+                max="24"
+                step="0.1"
+                required
+            >
+
+            <label>Breaks per Day</label>
+            <input
+                type="number"
+                name="breaks"
+                min="0"
+                max="30"
+                required
+            >
+
+            <label>Exercise Hours per Day</label>
+            <input
+                type="number"
+                name="exercise_hours"
+                min="0"
+                max="10"
+                step="0.1"
+                required
+            >
+
+            <label>Focus Level (1-10)</label>
+            <input
+                type="number"
+                name="focus_level"
+                min="1"
+                max="10"
+                required
+            >
+
+            <label>Stress Level (1-10)</label>
+            <input
+                type="number"
+                name="stress_level"
+                min="1"
+                max="10"
+                required
+            >
+
+            <label>Attendance (%)</label>
+            <input
+                type="number"
+                name="attendance"
+                min="0"
+                max="100"
+                required
+            >
+
+            <button type="submit">
+                Predict My Efficiency
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
